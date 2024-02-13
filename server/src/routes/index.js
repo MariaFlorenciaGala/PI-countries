@@ -1,12 +1,12 @@
 const { Router } = require("express");
 //importo los routers 
-const routerCountry = require('./country')
-const routerActivity = require('./activity')}
+const routerCountry = require('./routerCountry')
+const routerActivity = require('./routerActivity')
 
 const router = Router();
 
 //Configuro los routers
 router.use('/countries',routerCountry)
-router.use('activities',routerActivity)
+router.use('/activities',routerActivity)
 
 module.exports = router;

@@ -4,9 +4,11 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Activity', 
   {
-    ID:{
+    id:{
       type: DataTypes.INTEGER,
-      primeryKey:true,
+      primaryKey: true, // Marcamos 'id' como la clave primaria
+      allowNull: false,
+      autoIncrement: true
     },
     nombre: {
       type: DataTypes.STRING,
@@ -21,7 +23,7 @@ module.exports = (sequelize) => {
       allowNull:false,
     },
     temporada:{
-        type: DataTypes.ENUM('Verano, Otoño, Invierno, Primavera'),
+        type: DataTypes.ENUM('Verano', 'Otoño', 'Invierno', 'Primavera'),
         allowNull: false,
     },
   },{timestamps:false});//Cuando timestamps se establece en false, Sequelize no añadirá automáticamente los campos createdAt y updatedAt al modelo country

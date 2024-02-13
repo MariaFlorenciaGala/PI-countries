@@ -6,11 +6,12 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Country', 
   {
-    ID:{
+    id:{
       type: DataTypes.STRING(3),
-      primeryKey:true,
+      primaryKey: true, // Marcamos 'id' como la clave primaria
+      allowNull: false,
       validate:{
-        leng: [3]
+        len: [3]
       }
     },
     nombre: {
@@ -38,6 +39,10 @@ module.exports = (sequelize) => {
       allowNull:false,
     },
     poblacion:{
+      type: DataTypes.STRING,
+      allowNull:false,
+    },
+    mapa: {
       type: DataTypes.STRING,
       allowNull:false,
     }
