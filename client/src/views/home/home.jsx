@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getAllCountries } from '../../redux/actions'
 
 export default function Home (){
+  
   const dispatch = useDispatch();
   const allCountries = useSelector((state)=> state.allCountries)
 
@@ -11,11 +12,9 @@ export default function Home (){
     dispatch(getAllCountries())
   },[dispatch])
 
-
   return (
     <div>
       <div>home</div>
-
     </div>
 
   )
