@@ -1,0 +1,7 @@
+.search-bar {
+    display: flex;
+}
+
+.input {
+    border-radius: 30px;
+}
