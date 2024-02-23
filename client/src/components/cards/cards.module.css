@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    grid-template-columns: 25% 2fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 2rem 0;
+    transition-duration: 0.3s;
+}
+
+.btn {
+    border: none;
+    background-color: rgba(212, 200, 24, 0.336);
+    border-radius: 16px;
+    padding: .1em .7em 0 .7em;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+button:hover {
+    transition-duration: 0.5s;
+    background-color: rgba(241, 206, 8, 0.8);
+}
+.cards{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5em, 6fr));
+    align-self: center;
+    gap: 5rem;
+    font-size: 2rem;
+}
